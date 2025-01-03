@@ -13,7 +13,9 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
-
+task run(type: JavaExec) {
+    args '--stacktrace'  // 스택 트레이스를 항상 표시하도록 설정
+}
 test {
     useJUnitPlatform()
 }
